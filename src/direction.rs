@@ -14,13 +14,23 @@ impl Direction {
             Direction::West => (-1, 0),
         }
     }
+
+    pub fn iter() -> DirectionIter {
+        DirectionIter {
+            current: Direction::North,
+        }
+    }
 }
 
-impl Iterator for Direction {
+pub struct DirectionIter {
+    current: Direction,
+}
+
+impl Iterator for DirectionIter {
     type Item = Direction;
 
     fn next(&mut self) -> Option<Self::Item> {
-        match self {
+        match self.current {
             Direction::North => Some(Direction::East),
             Direction::East => Some(Direction::South),
             Direction::South => Some(Direction::West),
