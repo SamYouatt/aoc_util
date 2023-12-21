@@ -16,7 +16,7 @@ impl Coordinate {
 
         Coordinate {
             x: self.x + offset.0,
-            y: self.y + offset.0,
+            y: self.y + offset.1,
         }
     }
 }
