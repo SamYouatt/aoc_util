@@ -1,5 +1,6 @@
 use crate::direction::Direction;
 
+#[derive(PartialEq, Eq)]
 pub struct Coordinate {
     pub x: isize,
     pub y: isize,
