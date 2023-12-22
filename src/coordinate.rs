@@ -20,3 +20,16 @@ impl Coordinate {
         }
     }
 }
+
+#[derive(PartialEq, Eq, Hash, Debug, Clone, Copy)]
+pub struct Coordinate3 {
+    pub x: isize,
+    pub y: isize,
+    pub z: isize,
+}
+
+impl Coordinate3 {
+    pub fn new(x: isize, y: isize, z: isize) -> Coordinate3 {
+        Coordinate3 { x, y, z }
+    }
+}
